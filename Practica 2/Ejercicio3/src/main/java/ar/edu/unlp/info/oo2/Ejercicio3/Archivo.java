@@ -18,5 +18,15 @@ public class Archivo extends FileSystem{
 		this.nombre = nombre;
 	}
 
+	@Override
+	public Archivo archivoMasGrande() {
+		return this	;
+	}
+
+	@Override
+	public Archivo archivoMasNuevo() {
+		return this;
+	}
+
 	
 }

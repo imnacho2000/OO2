@@ -14,5 +14,8 @@ public abstract class FileSystem {
 	public LocalDate getFecha() {
 		return this.fecha;
 	}
+	
+	public abstract Archivo archivoMasGrande();
+	public abstract Archivo archivoMasNuevo();
 
 }

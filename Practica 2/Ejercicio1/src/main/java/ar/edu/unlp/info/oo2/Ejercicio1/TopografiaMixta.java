@@ -21,11 +21,9 @@ public class TopografiaMixta extends Topografia {
 		return this.componentes.stream().mapToDouble(p -> p.calcularProporcion()).sum() / 4;
 	}
 	
-	public boolean comparar(Topografia t1) {
-		if(this.calcularProporcion() == t1.calcularProporcion()){
-			return this.componentes.equals(t1.getTopografia());
-		}
-		return false;
+	@Override
+	public boolean equals(Topografia t1) {
+		return this.getTopografia().equals(t1.getTopografia());
 	}
 
 

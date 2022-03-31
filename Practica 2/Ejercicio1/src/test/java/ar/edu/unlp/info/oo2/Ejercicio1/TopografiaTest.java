@@ -22,18 +22,19 @@ public class TopografiaTest {
 	}
     @Test
     public void testAguayTierra() {
-        assertEquals(true,agua.comparar(new Agua()));
-        assertEquals(false,agua.comparar(new Tierra()));
-        assertEquals(true,tierra.comparar(new Tierra()));
-        assertEquals(false,tierra.comparar(new Agua()));
+        assertEquals(true,agua.equals(new Agua()));
+        assertEquals(false,agua.equals(new Tierra()));
+        assertEquals(true,tierra.equals(new Tierra()));
+        assertEquals(false,tierra.equals(new Agua()));
     }
     
     @Test
     public void testTopografiaMixta() {
     	TopografiaMixta topo = new TopografiaMixta(agua,tierra,agua,tierra);
-        assertEquals(true,topo.comparar(topoMixta));
-        assertEquals(false,topo.comparar(new TopografiaMixta(tierra,agua,tierra,agua)));
-        assertEquals(false,topo.comparar(new TopografiaMixta(tierra,agua,tierra,topoMixta)));
+        assertEquals(true,topo.equals(topoMixta));
+        assertEquals(false,topo.equals(new Agua()));
+        assertEquals(false,topo.equals(new TopografiaMixta(tierra,agua,tierra,agua)));
+        assertEquals(false,topo.equals(new TopografiaMixta(tierra,agua,tierra,topoMixta)));
     }
     
 }
