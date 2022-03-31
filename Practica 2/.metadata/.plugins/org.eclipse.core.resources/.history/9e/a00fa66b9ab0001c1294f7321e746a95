@@ -1,0 +1,39 @@
+package ar.edu.unlp.info.oo2.Ejercicio3;
+
+import java.time.LocalDate;
+
+public class Archivo extends FileSystem{
+
+	public Archivo(String nombre, LocalDate fecha, int tamanio) {
+		this.nombre = nombre;
+		this.fecha = fecha;
+		this.tamanio = tamanio;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public LocalDate getFecha() {
+		return fecha;
+	}
+
+	public void setFecha(LocalDate fecha) {
+		this.fecha = fecha;
+	}
+
+	public int getTamano() {
+		return tamanio;
+	}
+
+	public void setTamano(int tamanio) {
+		this.tamanio = tamanio;
+	}
+	
+	
+	
+}

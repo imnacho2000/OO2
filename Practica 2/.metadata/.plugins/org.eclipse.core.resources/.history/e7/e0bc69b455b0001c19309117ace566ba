@@ -1,0 +1,15 @@
+package ar.edu.unlp.info.oo2.Ejercicio1;
+
+import java.util.*;  
+
+
+public class TopografiaMixta {
+	private double proporcion;
+	private Topografia componentes;
+	
+	public TopografiaMixta(Topografia t1, Topografia t2, Topografia t3, Topografia t4) {
+		
+	}
+	
+	
+}

@@ -1,0 +1,40 @@
+/**
+ * 
+ */
+package ar.edu.unlp.info.oo2.ejercicio2;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+public class MediaPlayerTest {
+	
+	MediaPlayer mediaPlayer;
+	Audio audio;
+	VideoFile videoFile;
+	VideoStreamAdapter videoStreamAdapter;
+	
+	@BeforeEach
+	void setUp() throws Exception {
+		
+		mediaPlayer = new MediaPlayer();
+		audio = new Audio();
+		videoFile = new VideoFile();
+		videoStreamAdapter = new VideoStreamAdapter();
+		
+		mediaPlayer.agregarReproductores(audio);
+		mediaPlayer.agregarReproductores(videoFile);
+		mediaPlayer.agregarReproductores(videoStreamAdapter);
+		
+	}
+    @Test
+    public void testTodo() {
+    	assertEquals(3,mediaPlayer.listaLength());
+    	for(int n = 0; n < mediaPlayer.listaLength(); n++) {
+    		Obj media = (Media)mediaPlayer.getMedias();
+    		assertEquals("Reproduciendo",media.play());
+    	}
+    }
+    
+}

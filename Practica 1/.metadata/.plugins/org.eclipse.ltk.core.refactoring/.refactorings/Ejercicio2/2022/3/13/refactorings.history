@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;ar.edu.unlp.info.oo2.biblioteca.ExportarAJSON&apos; to &apos;AdapterJSON&apos;&#x0D;&#x0A;- Original project: &apos;Ejercicio2&apos;&#x0D;&#x0A;- Original element: &apos;ar.edu.unlp.info.oo2.biblioteca.ExportarAJSON&apos;&#x0D;&#x0A;- Renamed element: &apos;ar.edu.unlp.info.oo2.biblioteca.AdapterJSON&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ExportarAJSON&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;ar.edu.unlp.info.oo2.biblioteca{ExportarAJSON.java[ExportarAJSON" matchStrategy="1" name="AdapterJSON" qualified="false" references="true" similarDeclarations="false" stamp="1648153802276" textual="false" version="1.0"/>
+</session>

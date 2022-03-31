@@ -1,0 +1,12 @@
+package ar.edu.unlp.info.oo2.Ejercicio3;
+
+import java.time.LocalDate;
+
+public abstract class FileSystem {
+	protected String nombre;
+	protected LocalDate fecha;
+	protected int contenido;
+	
+	public abstract int getTamanio();
+
+}

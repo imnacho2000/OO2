@@ -1,0 +1,17 @@
+package ar.edu.unlp.info.oo2.Ejercicio1;
+
+public class Agua extends Topografia {
+	
+	private double proporcion;
+	
+	public Agua() {
+		this.proporcion = 0;
+		
+	}
+	@Override
+	public double calcularProporcion() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

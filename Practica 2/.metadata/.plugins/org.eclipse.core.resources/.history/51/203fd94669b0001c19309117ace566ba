@@ -1,0 +1,9 @@
+package ar.edu.unlp.info.oo2.Ejercicio3;
+
+public class Archivo {
+
+	public Archivo(String nombre, LocalDate fecha) {
+		
+	}
+	
+}

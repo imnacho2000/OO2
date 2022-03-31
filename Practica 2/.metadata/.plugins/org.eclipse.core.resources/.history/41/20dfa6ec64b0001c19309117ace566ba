@@ -1,0 +1,29 @@
+package ar.edu.unlp.info.oo2.Ejercicio1;
+
+public class Tierra extends Topografia{
+	private double proporcion;
+	
+	public Tierra() {
+		proporcion = 0;
+	}
+
+
+
+	@Override
+	public double calcularProporcion() {
+		return proporcion;
+	}
+
+
+
+	@Override
+	public boolean comparar(Topografia t1) {
+		return t1.calcularProporcion() == this.calcularProporcion();
+	}
+	
+	@Override
+	protected Tierra getTopografia() {
+		return this;
+	}
+	
+}

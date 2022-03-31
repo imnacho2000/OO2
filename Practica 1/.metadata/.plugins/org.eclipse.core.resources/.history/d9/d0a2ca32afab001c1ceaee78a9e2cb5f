@@ -1,0 +1,21 @@
+package ar.edu.unlp.info.oo2.biblioteca;
+
+import java.util.List;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+public class ExportarAJSON implements Exporter {
+	
+	@Override
+	public String exportar(List<Socio> socios) {
+		JSONObject obj = new JSONObject();
+		for (Socio n:socios) {
+			obj.put("nombre", n.getNombre());
+			obj.put("legajo", n.getLegajo());
+			obj.put("email",n.getEmail());
+		}
+		return obj.toJSONString();
+	}
+
+}

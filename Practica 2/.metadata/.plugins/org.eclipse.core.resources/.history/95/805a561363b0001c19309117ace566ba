@@ -1,0 +1,6 @@
+package ar.edu.unlp.info.oo2.Ejercicio2;
+
+public abstract class Topografia {
+	public abstract double calcularProporcion();
+	public abstract boolean comparar(Topografia t1);
+}

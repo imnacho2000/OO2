@@ -1,0 +1,14 @@
+package ar.edu.unlp.info.oo2.ejercicio2;
+
+public class Audio implements Media {
+	
+	public Audio() {
+		
+	}
+	@Override
+	public String play() {
+		return "Reproduciendo";
+		
+	}
+
+}

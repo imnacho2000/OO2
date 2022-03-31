@@ -1,0 +1,73 @@
+package ar.edu.unlp.info.oo2.Ejercicio3;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
+public class Directorio extends FileSystem {
+	
+	private int contenido;
+	private List<FileSystem>archivos = new ArrayList<FileSystem>();
+	
+	public Directorio(String nombre, LocalDate fecha) {
+		this.nombre = nombre;
+		this.fecha = fecha;
+		this.contenido = 32;
+	}
+	
+	public void agregar(FileSystem dato) {
+		this.archivos.add(dato);
+	}
+	
+	
+	public int tamanoTotalOcupado() {
+		return this.archivos.stream().mapToInt(p -> p.getTamanio()).sum() + this.contenido;
+	}
+	
+	public List<Directorio> getDirectorios(){
+		return  this.archivos.stream().filter(d -> d instanceof Directorio).map(d -> (Directorio) d).toList();
+	}
+	
+	public List<Archivo> getArchivos(){
+		return  this.archivos.stream().filter(d -> d instanceof Archivo).map(d -> (Archivo) d).toList();
+	}
+	
+	public boolean tieneDirecotrios() {
+		return this.getDirectorios().size() != 0;
+	}
+	
+	public boolean tieneArchivos() {
+		return this.getArchivos().size() != 0;
+	}
+	
+	
+	
+	public Archivo archivoMasGrande() {
+		 if(!tieneArchivos & !tieneDirectorios) {
+			 return null;
+		 }
+	}
+		
+	public Archivo archivoMasNuevo() {
+		 FileSystem arch = this.archivos.stream().max(Comparator.comparing(v -> v.getFecha())).orElse(null);
+		 if(arch instanceof Directorio) {
+			 Directorio d1 = (Directorio) arch;
+			 d1.archivoMasNuevo();
+		 }
+		 else if(arch instanceof Archivo){
+			 Archivo d1 = (Archivo) arch;
+			 return d1;
+		 }
+		 return null;
+
+	}
+
+	@Override
+	public int getTamanio() {
+		return this.tamanoTotalOcupado();
+	}
+	
+}

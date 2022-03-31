@@ -1,0 +1,31 @@
+package ar.edu.unlp.info.oo2.ejercicio1;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Tweet {
+	private String text;
+	private Tweet origen;
+	
+	public Tweet(String text) {
+		this.text = text;
+	}
+	
+	public Tweet(String text,Tweet t) {
+		this.text = text;
+		this.origen = t;
+	}
+	
+	public void agregarUsuario(Usuario user) {
+		this.users.add(user);
+	}
+	
+	public void eliminarUsuario(String screenName) {
+		Usuario userToDelete = this.users.stream().filter(u -> u.getScreenName().equals(screenName)).findFirst().orElse(null);
+		if(userToDelete != null) {
+			userToDelte.eliminarTweets();
+			this.users.remove(userToDelete);
+		}
+	}
+	
+}

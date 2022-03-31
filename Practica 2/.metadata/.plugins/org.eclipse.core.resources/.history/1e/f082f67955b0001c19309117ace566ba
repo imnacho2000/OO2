@@ -1,0 +1,12 @@
+package ar.edu.unlp.info.oo2.Ejercicio1;
+
+public class TopografiaMixta {
+	private double proporcion;
+	private Topografia componentes;
+	
+	public TopografiaMixta() {
+		
+	}
+	
+	
+}

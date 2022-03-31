@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package ar.edu.unlp.info.oo2.ejercicio1;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+public class TwitterTest {
+	
+	Twitter twitter;
+	Usuario user;
+	Usuario user2;
+	
+	@BeforeEach
+	void setUp() throws Exception {
+		user = new Usuario("James");
+		user2 = new Usuario("Juan");
+		twitter.agregarUsuario(user);
+		twitter.agregarUsuario(user2);
+	}
+	
+	@Test
+    public void testUserTwitter() {
+        assertEquals(2,twitter.listaUsers());
+    
+    }
+}

@@ -1,0 +1,18 @@
+package ar.edu.unlp.info.oo2.ejercicio2;
+
+public class VideoStreamAdapter implements Media{
+	private VideoStream videoStream;
+	
+	
+	
+	public VideoStreamAdapter() {
+	}
+
+
+
+	@Override
+	public String play() {
+		videoStream.reproduce();
+	}
+
+}

@@ -1,0 +1,30 @@
+package ar.edu.unlp.info.oo2.Ejercicio2;
+
+public class Pantano extends Topografia{
+		
+	
+	public Pantano(Agua agua, Tierra tierra) {
+		agua.setProporcion(0.7);
+		tierra.setProporcion(0.3);
+	}
+
+	@Override
+	public double calcularProporcion() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean comparar(Topografia t1) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	protected Pantano getTopografia() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+}

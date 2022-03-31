@@ -1,0 +1,27 @@
+package ar.edu.unlp.info.oo2.biblioteca;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+public class BibliotecaTest {
+	
+	Biblioteca biblioteca;
+	Socio miqueas;
+	Socio nachis;
+	
+	@BeforeEach
+	void setUp() throws Exception {
+		biblioteca = new Biblioteca();
+		miqueas = new Socio("Miqueas","mikybrambilla@gmail.com","16354/2");
+		nachis = new Socio("Ignacio","ignaciocarrera2000@hotmail.com","16754/3");
+		biblioteca.agregarSocio(miqueas);
+		biblioteca.agregarSocio(nachis);
+	}
+    @Test
+    public void testNombreCompleto() {
+    
+        
+    }
+}

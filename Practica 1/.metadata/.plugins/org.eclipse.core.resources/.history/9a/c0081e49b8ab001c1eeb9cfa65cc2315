@@ -1,0 +1,10 @@
+package ar.edu.unlp.info.oo2.ejercicio2;
+
+import java.util.List;
+
+public class MediaPlayer {
+	private List<media> medias;
+	public MediaPlayer() {
+		this.medias = new ArrayList<media>();
+	}
+}
