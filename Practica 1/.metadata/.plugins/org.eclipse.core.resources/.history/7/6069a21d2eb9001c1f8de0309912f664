@@ -1,0 +1,10 @@
+package ar.edu.unlp.info.oo2.biblioteca;
+
+import java.util.List;
+
+public class VoorheesExporter {
+	private Exporter exportar;
+	public String exportar(List<Socio> socios) {
+		return this.exportar.exportar(socios);
+	}
+}

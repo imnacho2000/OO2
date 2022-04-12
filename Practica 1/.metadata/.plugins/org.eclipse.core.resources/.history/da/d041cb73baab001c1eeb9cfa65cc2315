@@ -1,9 +1,0 @@
-package ar.edu.unlp.info.oo2.ejercicio2;
-
-public class VideoStream  {
-	
-	public void reproduce() {
-		System.out.print("Reproduciendo video stream..");
-	}
-	
-}

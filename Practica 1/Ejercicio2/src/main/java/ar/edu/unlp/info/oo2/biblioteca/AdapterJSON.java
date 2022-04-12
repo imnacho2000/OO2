@@ -5,11 +5,8 @@ import java.util.List;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-public class AdapterJSON extends VoorheesExporter {
+public class AdapterJSON implements Exporter {
 	
-	public AdapterJSON(Biblioteca biblio) {
-		biblio.setExporter(this);
-	}
 	
 	public String exportar(List<Socio> socios) {
 		JSONArray arregloSocios = new JSONArray();
