@@ -9,7 +9,7 @@ public class CuatroGConnection {
 	}
 	
 	public String transmit(String data, int crc) {
-		return data;
+		return "Utilizando " +  this.getSymb() + " enviando: " + data;
 	}
 	
 	public String getSymb() {

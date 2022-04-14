@@ -22,10 +22,11 @@ public class DispositivoTest {
     	device.setConnection(new CuatroGAdapter());
         assertEquals("4G Connection", device.getEstado());
         device.setCalculator(new CRC16_Calculator());
-        assertEquals("Nacho",device.send("Nacho"));
+        assertEquals("Utilizando 4G Connection enviando: Nacho",device.send("Nacho"));
         device.setCalculator(new CRC32_Calculator());
-        assertEquals("Nacho",device.send("Nacho"));
+        assertEquals("Utilizando 4G Connection enviando: Nacho",device.send("Nacho"));
         device.setConnection(new WifiConn());
         assertEquals("Wi Fi connection",device.getEstado());
+        assertEquals("Utilizando Wi Fi connection enviando: pedro",device.send("pedro"));
     }
 }

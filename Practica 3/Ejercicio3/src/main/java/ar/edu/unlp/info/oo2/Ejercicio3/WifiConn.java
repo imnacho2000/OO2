@@ -9,7 +9,7 @@ public class WifiConn implements Connection {
 	
 	@Override
 	public String sendData(String data, int crc) {
-		return data;
+		return "Utilizando " + this.pict() + " enviando: " + data;
 	}
 
 	@Override
