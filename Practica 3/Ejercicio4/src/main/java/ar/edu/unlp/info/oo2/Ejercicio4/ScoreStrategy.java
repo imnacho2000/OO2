@@ -2,15 +2,11 @@ package ar.edu.unlp.info.oo2.Ejercicio4;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Stream;
 
-public class ScoreStrategy implements SuggestionStrategy {
+public class ScoreStrategy extends SuggestionStrategy {
 
-	@Override
-	public List<Movie> sugeridos(Decoder dato) {
-	    return   dato.getMovies().stream().filter(m -> !dato.getPlayedMovies().contains(m)).toList().stream()
-	            .sorted(Comparator.comparingDouble(Movie::getScore).reversed()
-	            .thenComparing(Comparator.comparing(Movie::getReleaseYear).reversed()))
-	            .limit(3)
-	            .toList(); 
+	protected Stream<Movie> streams(List<Movie> collect) {
+		return collect.stream().sorted(Comparator.comparingDouble(Movie::getScore).reversed().thenComparing(Comparator.comparing(Movie::getReleaseYear).reversed()));
 	}
 }

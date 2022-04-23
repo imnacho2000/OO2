@@ -3,12 +3,14 @@ package ar.edu.unlp.info.oo2.Ejercicio4;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-public class NewesStrategy implements SuggestionStrategy {
+public class NewesStrategy extends SuggestionStrategy {
+
 
 	@Override
-	public List<Movie> sugeridos(Decoder dato) {
-		return  dato.getMovies().stream().filter(m -> !(dato.getPlayedMovies().contains(m))).toList().stream()
-				.sorted(Comparator.comparing(Movie::getReleaseYear).reversed()).limit(3).collect(Collectors.toList());
+	protected Stream<Movie> streams(List<Movie> collect) {
+		return  collect.stream()
+				.sorted(Comparator.comparing(Movie::getReleaseYear).reversed());
 	}
 }
