@@ -1,0 +1,13 @@
+package ar.edu.unlp.info.oo2.facturacion_llamadas;
+
+public class PersonaFisica extends Persoona {
+	protected String doc;
+	
+	public PersonaFisica(String t,String nombreyape, String telefono,String doc) {
+		super(t, nombreyape, telefono, 0);
+		this.doc = doc;
+	}
+	
+	
+	
+}

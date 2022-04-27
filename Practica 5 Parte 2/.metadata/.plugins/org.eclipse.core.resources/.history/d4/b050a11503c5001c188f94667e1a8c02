@@ -1,0 +1,21 @@
+package ar.edu.unlp.info.oo2.facturacion_llamadas;
+
+public class PersonaJuridica extends Persoona{
+	private String cuit;
+	public PersonaJuridica(String t, String nombreyape, String telefono,String cuit) {
+		super(t, nombreyape, telefono, 0.15);
+		this.cuit = cuit;
+	}
+	
+	
+	public String getCuit() {
+		return cuit;
+	}
+	
+	public void setCuit(String cuit) {
+		this.cuit = cuit;
+	}
+	
+	
+}
+	

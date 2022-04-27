@@ -1,0 +1,15 @@
+package ar.edu.unlp.info.oo2.facturacion_llamadas;
+
+public class LlamadaLocal extends Llamada {
+
+	public LlamadaLocal() {
+		super();
+	}
+	
+	@Override
+	public int calcularCosto() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

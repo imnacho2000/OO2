@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="PersoonalTest" project="facturacion_llamadas" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="ar.edu.unlp.info.oo2.facturacion_llamadas.PersoonalTest" time="0.017" displayname="PersoonalTest" uniqueid="[engine:junit-jupiter]/[class:ar.edu.unlp.info.oo2.facturacion_llamadas.PersoonalTest]">
+    <testcase name="testAgregarUsuario" classname="ar.edu.unlp.info.oo2.facturacion_llamadas.PersoonalTest" time="0.013" displayname="testAgregarUsuario()" uniqueid="[engine:junit-jupiter]/[class:ar.edu.unlp.info.oo2.facturacion_llamadas.PersoonalTest]/[method:testAgregarUsuario()]"/>
+    <testcase name="testEliminarUsuario" classname="ar.edu.unlp.info.oo2.facturacion_llamadas.PersoonalTest" time="0.001" displayname="testEliminarUsuario()" uniqueid="[engine:junit-jupiter]/[class:ar.edu.unlp.info.oo2.facturacion_llamadas.PersoonalTest]/[method:testEliminarUsuario()]"/>
+    <testcase name="testcalcularMontoTotalLlamadas" classname="ar.edu.unlp.info.oo2.facturacion_llamadas.PersoonalTest" time="0.002" displayname="testcalcularMontoTotalLlamadas()" uniqueid="[engine:junit-jupiter]/[class:ar.edu.unlp.info.oo2.facturacion_llamadas.PersoonalTest]/[method:testcalcularMontoTotalLlamadas()]"/>
+  </testsuite>
+</testrun>

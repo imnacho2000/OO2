@@ -1,0 +1,61 @@
+package ar.edu.unlp.info.oo2.facturacion_llamadas;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public abstract class Persoona {
+	public List<Llamada> lista1 = new ArrayList<Llamada>();
+	protected String t;
+	protected String nya;
+	protected String tel;
+	protected double descuento;
+	protected Persoonal sis;
+	
+	
+	
+	
+	public Persoona(String t, String nya, String tel, double descuento) {
+		super();
+		this.t = t;
+		this.nya = nya;
+		this.tel = tel;
+		this.descuento = descuento;
+	}
+	
+	public List<Llamada> getLista1() { 
+		return lista1;
+	}
+	public void setLista1(List<Llamada> lista1) {
+		this.lista1 = lista1;
+	}
+	public String getT() {
+		return t;
+	}
+	public void setT(String t) {
+		this.t = t;
+	}
+	public String getNya() {
+		return nya;
+	}
+	public void setNya(String nya) {
+		this.nya = nya;
+	}
+	public String getTel() {
+		return tel;
+	}
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+	
+	public double getDescuento() {
+		return descuento;
+	}
+	public void setDescuento(double descuento) {
+		this.descuento = descuento;
+	}
+	
+	
+	
+
+	
+}
