@@ -5,16 +5,16 @@ import java.util.List;
 
 public abstract class Persona {
 	private List<Llamada> listaLlamadas;
-	protected String nya;
-	protected String tel;
+	protected String nombreYApellido;
+	protected String telelefono;
 	protected double descuento;
 	protected Persoonal sistema; 
 	
-	public Persona(String nya, String tel) {
+	public Persona(String nombreYApellido, String telelefono) {
 		super();
 		this.listaLlamadas = new ArrayList<Llamada>();
-		this.nya = nya;
-		this.tel = tel;
+		this.nombreYApellido = nombreYApellido;
+		this.telelefono = telelefono;
 	}
 	
 	public List<Llamada> getLlamadas() { 
@@ -30,42 +30,25 @@ public abstract class Persona {
 	}
 	
 	public String getNya() {
-		return nya;
+		return nombreYApellido;
 	}
 	
-	public void setNya(String nya) {
-		this.nya = nya;
+	public void setNya(String nombreYApellido) {
+		this.nombreYApellido = nombreYApellido;
 	}
 	
 	public String getTel() {
-		return tel;
+		return telelefono;
 	}
 	
-	public void setTel(String tel) {
-		this.tel = tel;
+	public void setTel(String telelefono) {
+		this.telelefono = telelefono;
 	}
-	
-	public abstract String getTipoPersona();
 	
 	public abstract double getDescuento();
+	
 
 	public double calcularMontoTotalLlamadas(Persoonal sistema) {
-//		double monto = 0;
 		return  this.getLlamadas().stream().mapToDouble(elementos -> elementos.calcularCosto() - (elementos.calcularCosto() * this.getDescuento())).sum();
-//		return this.getLlamadas().stream().mapto
-//		for (Llamada llamada : this.getLlamadas()) {
-//			double aux = 0;
-//			aux += llamada.calcularCosto();
-////			if (llamada.getTipo().equals("nacional")) {
-////				auxc += llamada.calcularCosto();
-////			} else if (llamada.getTipo().equals("internacional")) {
-////				auxc += llamada.calcularCosto();
-////			}
-//			aux -= aux * this.getDescuento();
-//	
-//			
-//			monto += aux;
-//		}
-//		return monto;
 	}
 }

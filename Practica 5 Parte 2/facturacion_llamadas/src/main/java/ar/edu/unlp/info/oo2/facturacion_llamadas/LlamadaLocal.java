@@ -8,14 +8,6 @@ public class LlamadaLocal extends Llamada {
 	
 	@Override
 	public double calcularCosto() {
-		if(this.getTipo().equals("nacional")) return super.getDur() * 3 + (super.getDur() * 3 * 0.21);
-		return 0;
+		return this.getDuracion() * 3 + (this.getDuracion() * 3 * 0.21);
 	}
-
-	@Override
-	public String getTipo() {
-		// TODO Auto-generated method stub
-		return "nacional";
-	}
-
 }

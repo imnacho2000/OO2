@@ -15,10 +15,10 @@ class PersoonalTest {
 	@BeforeEach
 	public void setUp() {
 		this.sistema = new Persoonal();
-		this.sistema.getListaGuiaTelefonica().agregarTelefono(this.sistema, "2214444554");
-		this.sistema.getListaGuiaTelefonica().agregarTelefono(this.sistema, "2214444555");
-		this.sistema.getListaGuiaTelefonica().agregarTelefono(this.sistema, "2214444556");
-		this.sistema.getListaGuiaTelefonica().agregarTelefono(this.sistema, "2214444557");
+		this.sistema.getListaGuiaTelefonica().agregarTelefono("2214444554");
+		this.sistema.getListaGuiaTelefonica().agregarTelefono("2214444555");
+		this.sistema.getListaGuiaTelefonica().agregarTelefono("2214444556");
+		this.sistema.getListaGuiaTelefonica().agregarTelefono("2214444557");
 		
 		this.emisorPersonaFisca = sistema.registrarUsuario("11555666", "Marcelo Tinelli" , "fisica");
 		this.remitentePersonaFisica = sistema.registrarUsuario("00000001", "Mirtha Legrand" , "fisica");
@@ -48,7 +48,7 @@ class PersoonalTest {
 	@Test
 	void testAgregarUsuario() {
 		assertEquals(this.sistema.cantidadDeUsuarios(), 4);
-		this.sistema.getListaGuiaTelefonica().agregarTelefono(this.sistema, "2214444558"); 
+		this.sistema.getListaGuiaTelefonica().agregarTelefono("2214444558"); 
 		Persona nuevaPersona = this.sistema.registrarUsuario("2444555","Chiche Gelblung", "fisica");
 		
 		assertEquals(this.sistema.cantidadDeUsuarios(), 5);

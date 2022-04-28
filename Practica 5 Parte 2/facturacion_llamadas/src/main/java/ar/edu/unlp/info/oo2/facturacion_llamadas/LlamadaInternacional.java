@@ -8,14 +8,8 @@ public class LlamadaInternacional extends Llamada {
 	
 	@Override
 	public double calcularCosto() {
-		if(this.getTipo().equals("internacional")) return super.getDur() * 200 + (super.getDur() * 200 * 0.21);
-		else return 0;
+		return this.getDuracion() * 200 + (this.getDuracion() * 200 * 0.21);
 	}
 
-	@Override
-	public String getTipo() {
-		// TODO Auto-generated method stub
-		return "internacional";
-	}
 
 }

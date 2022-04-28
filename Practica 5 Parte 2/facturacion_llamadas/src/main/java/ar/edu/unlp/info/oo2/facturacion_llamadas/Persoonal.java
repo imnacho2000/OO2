@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Persoonal {
 	
-	private List<Persona> listaPersonas = new ArrayList<Persona>();
-	private List<Llamada> listaLlamada = new ArrayList<Llamada>();
+	private List<Persona> listaPersonas;
+	private List<Llamada> listaLlamada;
 	private GuiaTelefonica listaGuiaTelefonica;
 	
 	public Persoonal() {
@@ -19,7 +19,7 @@ public class Persoonal {
 	public Persona registrarUsuario(String data, String nombre, String tipoPersona) {
 		Persona persona = creacionTipoPersona(data, nombre, tipoPersona);
 		persona.sistema = this;
-		listaPersonas.add(persona);
+		this.listaPersonas.add(persona);
 		return persona;
 		
 	}
@@ -34,29 +34,29 @@ public class Persoonal {
 	
 	
 	public boolean eliminarUsuario(Persona persona) {
-		if(listaPersonas.removeIf(elemento -> elemento.equals(persona))) {;
-			this.getListaGuiaTelefonica().agregarTelefono(this,persona.getTel());
+		if(this.listaPersonas.removeIf(elemento -> elemento.equals(persona))) {;
+			this.getListaGuiaTelefonica().agregarTelefono(persona.getTel());
 			return true;
 		}
 		return false;
 	}
 	
 	public Llamada registrarLlamada(Persona emisor , Persona remitente, String tipoDeLlamada, int duracion) {
-		Llamada llamada = new Llamada(tipoDeLlamada,emisor,remitente,duracion);
+		Llamada llamada = creacionTipoLlamada(tipoDeLlamada,emisor,remitente,duracion);
 		listaLlamada.add(llamada);
 		emisor.agregarLlamada(llamada);
 		return llamada;
 	}
 	
-//	public Llamada creacionTipoLlamada(String tipoDeLlamada, Persona emisor, Persona remitente, int duracion) {
-//		if(tipoDeLlamada.equals("nacional")) {
-//			return new LlamadaLocal(tipoDeLlamada, emisor, remitente, duracion);
-//		}
-//		else if(tipoDeLlamada.equals("internacional")) {
-//			return new LlamadaInternacional(tipoDeLlamada, emisor, remitente, duracion);
-//		}
-//		return null;
-//	}
+	public Llamada creacionTipoLlamada(String tipoDeLlamada, Persona emisor, Persona remitente, int duracion) {
+		if(tipoDeLlamada.equals("nacional")) {
+			return new LlamadaLocal(tipoDeLlamada, emisor, remitente, duracion);
+		}
+		else if(tipoDeLlamada.equals("internacional")) {
+			return new LlamadaInternacional(tipoDeLlamada, emisor, remitente, duracion);
+		}
+		return null;
+	}
 	
 	
 	public int cantidadDeUsuarios() {

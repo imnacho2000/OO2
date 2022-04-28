@@ -22,13 +22,6 @@ public class PersonaFisica extends Persona {
 		return 0;
 	}
 
-	@Override
-	public String getTipoPersona() {
-		return "fisica";
-	}
-
-
-	
 	
 	
 }

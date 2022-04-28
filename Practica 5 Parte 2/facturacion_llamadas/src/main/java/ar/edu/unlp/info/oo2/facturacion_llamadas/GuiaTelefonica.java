@@ -10,12 +10,8 @@ public class GuiaTelefonica {
 		 this.guia = new TreeSet<String>();
 	}
 
-	public boolean agregarTelefono(Persoonal sistema,String str) {
-		if (!this.guia.contains(str)) {
-			this.guia.add(str);
-			return true;
-		}
-		return false;
+	public boolean agregarTelefono(String str) {
+		return this.guia.add(str);
 	}
 	
 	

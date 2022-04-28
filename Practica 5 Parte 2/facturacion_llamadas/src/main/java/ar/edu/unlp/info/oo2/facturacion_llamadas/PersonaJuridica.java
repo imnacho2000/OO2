@@ -20,11 +20,6 @@ public class PersonaJuridica extends Persona{
 	public double getDescuento() {
 		return 0.15;
 	}
-
-	@Override
-	public String getTipoPersona() {
-		return "juridica";
-	}
 	
 }
 	
