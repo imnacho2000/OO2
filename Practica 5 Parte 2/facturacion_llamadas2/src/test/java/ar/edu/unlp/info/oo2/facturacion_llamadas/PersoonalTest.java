@@ -2,6 +2,8 @@ package ar.edu.unlp.info.oo2.facturacion_llamadas;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.text.DecimalFormat;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -36,8 +38,9 @@ class PersoonalTest {
 
 	@Test
 	void testcalcularMontoTotalLlamadas() {
-		assertEquals(emisorPersonaFisca.calcularMontoTotalLlamadas(this.sistema), 15105.640000000001);
-		assertEquals(emisorPersonaJuridica.calcularMontoTotalLlamadas(this.sistema), 3131.7825000000003);
+		DecimalFormat df = new DecimalFormat("#.00");
+		assertEquals(df.format(emisorPersonaFisca.calcularMontoTotalLlamadas(this.sistema)),df.format(15105.640000000001));
+		assertEquals(df.format(emisorPersonaJuridica.calcularMontoTotalLlamadas(this.sistema)), df.format(3131.7825000000003));
 		assertEquals(remitentePersonaFisica.calcularMontoTotalLlamadas(this.sistema), 0);
 		assertEquals(remitentePersonaJuridica.calcularMontoTotalLlamadas(this.sistema), 0);
 	}

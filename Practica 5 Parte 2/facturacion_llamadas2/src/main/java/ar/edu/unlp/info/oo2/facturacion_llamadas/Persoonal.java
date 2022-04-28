@@ -35,21 +35,21 @@ public class Persoonal {
 	}
 	
 	public Llamada registrarLlamada(Persona emisor , Persona remitente, String tipoDeLlamada, int duracion) {
-		Llamada llamada = creacionTipoLlamada(tipoDeLlamada,emisor,remitente,duracion);
+		Llamada llamada = new Llamada(tipoDeLlamada,emisor,remitente,duracion);
 		listaLlamada.add(llamada);
 		emisor.agregarLlamada(llamada);
 		return llamada;
 	}
 	
-	public Llamada creacionTipoLlamada(String tipoDeLlamada, Persona emisor, Persona remitente, int duracion) {
-		if(tipoDeLlamada.equals("nacional")) {
-			return new LlamadaLocal(tipoDeLlamada, emisor, remitente, duracion);
-		}
-		else if(tipoDeLlamada.equals("internacional")) {
-			return new LlamadaInternacional(tipoDeLlamada, emisor, remitente, duracion);
-		}
-		return null;
-	}
+//	public Llamada creacionTipoLlamada(String tipoDeLlamada, Persona emisor, Persona remitente, int duracion) {
+//		if(tipoDeLlamada.equals("nacional")) {
+//			return new LlamadaLocal(tipoDeLlamada, emisor, remitente, duracion);
+//		}
+//		else if(tipoDeLlamada.equals("internacional")) {
+//			return new LlamadaInternacional(tipoDeLlamada, emisor, remitente, duracion);
+//		}
+//		return null;
+//	}
 	
 	
 	public int cantidadDeUsuarios() {

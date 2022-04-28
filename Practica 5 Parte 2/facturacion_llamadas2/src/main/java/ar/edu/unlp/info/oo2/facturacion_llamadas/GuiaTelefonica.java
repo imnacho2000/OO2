@@ -24,7 +24,5 @@ public class GuiaTelefonica {
 		this.guia.remove(tel);
 		return tel;
 	}
-
-	
 	
 }

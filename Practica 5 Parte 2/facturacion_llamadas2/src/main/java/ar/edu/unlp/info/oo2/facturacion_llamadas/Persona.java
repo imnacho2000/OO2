@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Persona {
-	public List<Llamada> listaLlamadas = new ArrayList<Llamada>();
+	private List<Llamada> listaLlamadas = new ArrayList<Llamada>();
 	protected String nya;
 	protected String tel;
 	protected double descuento;
@@ -49,20 +49,22 @@ public abstract class Persona {
 	public abstract double getDescuento();
 
 	public double calcularMontoTotalLlamadas(Persoonal sistema) {
-		double c = 0;
-		for (Llamada llamada : this.getLlamadas()) {
-			double auxc = 0;
-			auxc += llamada.calcularCosto();
-//			if (llamada.getTipo().equals("nacional")) {
-//				auxc += llamada.calcularCosto();
-//			} else if (llamada.getTipo().equals("internacional")) {
-//				auxc += llamada.calcularCosto();
-//			}
-			auxc -= auxc* this.getDescuento();
-	
-			
-			c += auxc;
-		}
-		return c;
+//		double monto = 0;
+		return  this.getLlamadas().stream().mapToDouble(elementos -> elementos.calcularCosto() - (elementos.calcularCosto() * this.getDescuento())).sum();
+//		return this.getLlamadas().stream().mapto
+//		for (Llamada llamada : this.getLlamadas()) {
+//			double aux = 0;
+//			aux += llamada.calcularCosto();
+////			if (llamada.getTipo().equals("nacional")) {
+////				auxc += llamada.calcularCosto();
+////			} else if (llamada.getTipo().equals("internacional")) {
+////				auxc += llamada.calcularCosto();
+////			}
+//			aux -= aux * this.getDescuento();
+//	
+//			
+//			monto += aux;
+//		}
+//		return monto;
 	}
 }

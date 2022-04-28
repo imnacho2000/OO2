@@ -18,8 +18,7 @@ public class PersonaJuridica extends Persona{
 
 	@Override
 	public double getDescuento() {
-		if(this.getTipoPersona().equals("juridica")) return 0.15;
-		return -1;
+		return 0.15;
 	}
 
 	@Override
