@@ -4,3 +4,4 @@
 1650938491291	Move method 'agregarTelefono'
 1650939291041	Extract method 'extracted'
 1651086107512	Move method 'calcularMontoTotalLlamadas'
+1651110521357	Encapsulate field 'listaGuiaTelefonica'

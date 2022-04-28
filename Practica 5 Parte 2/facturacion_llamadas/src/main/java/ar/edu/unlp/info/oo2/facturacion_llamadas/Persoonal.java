@@ -7,7 +7,14 @@ public class Persoonal {
 	
 	List<Persona> listaPersonas = new ArrayList<Persona>();
 	List<Llamada> listaLlamada = new ArrayList<Llamada>();
-	public GuiaTelefonica listaGuiaTelefonica = new GuiaTelefonica();
+	private GuiaTelefonica listaGuiaTelefonica;
+	
+	public Persoonal() {
+		this.listaPersonas = new ArrayList<Persona>();
+		this.listaLlamada = new ArrayList<Llamada>();
+		this.listaGuiaTelefonica = new GuiaTelefonica();
+	}
+	
 	
 	public Persona registrarUsuario(String data, String nombre, String tipoPersona) {
 		Persona persona = creacionTipoPersona(data, nombre, tipoPersona);
@@ -19,7 +26,7 @@ public class Persoonal {
 
 
 	private Persona creacionTipoPersona(String data, String nombre, String tipoPersona) {
-		String tel = this.listaGuiaTelefonica.obtenerNuevoNumero();
+		String tel = this.getListaGuiaTelefonica().obtenerNuevoNumero();
 		if (tipoPersona.equals("fisica")) return new PersonaFisica(nombre,tel,data);
 		else if (tipoPersona.equals("juridica")) return new PersonaJuridica(nombre,tel,data);
 		return null;
@@ -28,7 +35,7 @@ public class Persoonal {
 	
 	public boolean eliminarUsuario(Persona persona) {
 		if(listaPersonas.removeIf(elemento -> elemento.equals(persona))) {;
-			this.listaGuiaTelefonica.agregarTelefono(this,persona.getTel());
+			this.getListaGuiaTelefonica().agregarTelefono(this,persona.getTel());
 			return true;
 		}
 		return false;
@@ -58,6 +65,16 @@ public class Persoonal {
 
 	public boolean existeUsuario(Persona persona) {
 		return this.listaPersonas.contains(persona);
+	}
+
+
+	public GuiaTelefonica getListaGuiaTelefonica() {
+		return listaGuiaTelefonica;
+	}
+
+
+	public void setListaGuiaTelefonica(GuiaTelefonica listaGuiaTelefonica) {
+		this.listaGuiaTelefonica = listaGuiaTelefonica;
 	}
 	
 }

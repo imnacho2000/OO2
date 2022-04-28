@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Persona {
-	private List<Llamada> listaLlamadas = new ArrayList<Llamada>();
+	private List<Llamada> listaLlamadas;
 	protected String nya;
 	protected String tel;
 	protected double descuento;
@@ -12,6 +12,7 @@ public abstract class Persona {
 	
 	public Persona(String nya, String tel) {
 		super();
+		this.listaLlamadas = new ArrayList<Llamada>();
 		this.nya = nya;
 		this.tel = tel;
 	}

@@ -4,7 +4,11 @@ import java.util.TreeSet;
 import java.util.SortedSet;
 
 public class GuiaTelefonica {
-	public SortedSet<String> guia = new TreeSet<String>();
+	private SortedSet<String> guia;
+	
+	public GuiaTelefonica() {
+		 this.guia = new TreeSet<String>();
+	}
 
 	public boolean agregarTelefono(Persoonal sistema,String str) {
 		if (!this.guia.contains(str)) {
