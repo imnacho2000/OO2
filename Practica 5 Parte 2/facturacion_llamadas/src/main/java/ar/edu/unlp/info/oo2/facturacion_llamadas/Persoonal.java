@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Persoonal {
 	
-	List<Persona> listaPersonas = new ArrayList<Persona>();
-	List<Llamada> listaLlamada = new ArrayList<Llamada>();
+	private List<Persona> listaPersonas = new ArrayList<Persona>();
+	private List<Llamada> listaLlamada = new ArrayList<Llamada>();
 	private GuiaTelefonica listaGuiaTelefonica;
 	
 	public Persoonal() {

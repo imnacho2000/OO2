@@ -4,7 +4,6 @@ INDEX VERSION 1.131+C:\Users\ignac\OneDrive\Escritorio\OO2\Practica 5 Parte 2\.m
 1865797976.index
 4069953991.index
 2953730919.index
-1767389723.index
 3966092118.index
 2669392255.index
 1554378507.index
