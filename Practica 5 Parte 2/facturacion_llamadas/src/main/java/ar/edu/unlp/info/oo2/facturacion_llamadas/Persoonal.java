@@ -43,7 +43,7 @@ public class Persoonal {
 	
 	public Llamada registrarLlamada(Persona emisor , Persona remitente, String tipoDeLlamada, int duracion) {
 		Llamada llamada = creacionTipoLlamada(tipoDeLlamada,emisor,remitente,duracion);
-		listaLlamada.add(llamada);
+		this.listaLlamada.add(llamada);
 		emisor.agregarLlamada(llamada);
 		return llamada;
 	}

@@ -1843,3 +1843,7 @@ org.eclipse.core.runtime.CoreException: Launch configuration PersoonalTest (1) r
 2022-04-28 13:01:35,426 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ignac\OneDrive\Escritorio\OO2\Practica 5 Parte 2\facturacion_llamadas\src\main\resources
 2022-04-28 13:01:35,427 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2022-04-28 13:01:35,427 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ignac\OneDrive\Escritorio\OO2\Practica 5 Parte 2\facturacion_llamadas\src\test\resources
+2022-04-28 13:04:13,467 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-04-28 13:04:13,467 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ignac\OneDrive\Escritorio\OO2\Practica 5 Parte 2\facturacion_llamadas\src\main\resources
+2022-04-28 13:04:13,467 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-04-28 13:04:13,468 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ignac\OneDrive\Escritorio\OO2\Practica 5 Parte 2\facturacion_llamadas\src\test\resources
