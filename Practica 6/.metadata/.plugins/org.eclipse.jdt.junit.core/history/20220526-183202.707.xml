@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="DatabaseAccessProxyTest" project="accesobd" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="ar.edu.unlp.info.oo2.accesobd.DatabaseAccessProxyTest" time="27.598" displayname="DatabaseAccessProxyTest" uniqueid="[engine:junit-jupiter]/[class:ar.edu.unlp.info.oo2.accesobd.DatabaseAccessProxyTest]">
+    <testcase name="testInsertNewRowLogged" classname="ar.edu.unlp.info.oo2.accesobd.DatabaseAccessProxyTest" time="11.227" displayname="testInsertNewRowLogged()" uniqueid="[engine:junit-jupiter]/[class:ar.edu.unlp.info.oo2.accesobd.DatabaseAccessProxyTest]/[method:testInsertNewRowLogged()]"/>
+    <testcase name="testGetSearchResultsLogged" classname="ar.edu.unlp.info.oo2.accesobd.DatabaseAccessProxyTest" time="10.939" displayname="testGetSearchResultsLogged()" uniqueid="[engine:junit-jupiter]/[class:ar.edu.unlp.info.oo2.accesobd.DatabaseAccessProxyTest]/[method:testGetSearchResultsLogged()]"/>
+    <testcase name="testGetSearchResultsNotLogged" classname="ar.edu.unlp.info.oo2.accesobd.DatabaseAccessProxyTest" time="5.43" displayname="testGetSearchResultsNotLogged()" uniqueid="[engine:junit-jupiter]/[class:ar.edu.unlp.info.oo2.accesobd.DatabaseAccessProxyTest]/[method:testGetSearchResultsNotLogged()]"/>
+    <testcase name="testInsertNewRowNotLogged" classname="ar.edu.unlp.info.oo2.accesobd.DatabaseAccessProxyTest" time="0.0" displayname="testInsertNewRowNotLogged()" uniqueid="[engine:junit-jupiter]/[class:ar.edu.unlp.info.oo2.accesobd.DatabaseAccessProxyTest]/[method:testInsertNewRowNotLogged()]"/>
+  </testsuite>
+</testrun>
