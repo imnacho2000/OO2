@@ -1,0 +1,67 @@
+package ar.edu.unlp.info.oo2.accesobd;
+
+import java.io.IOException;
+import java.util.Collection;
+import java.util.List;
+import java.util.logging.*;
+
+public class DatabaseAccessProxy implements DatabaseAccess {
+	private DatabaseAccess database;
+	private boolean logged;
+	private String pass;
+	
+	// Variables nuevas que cree
+	private Handler manejador;
+	private Handler fileManejador;
+	
+	public DatabaseAccessProxy(String pass, DatabaseAccess database) throws SecurityException, IOException {
+		this.logged = false;
+		this.pass = pass;
+		this.database = database;
+		
+	//codigo que agregue
+		LogManager.getLogManager().reset();
+		
+		manejador = new ConsoleHandler();	
+		manejador.setFormatter(new ShoutingSimpleFomatter());
+		
+		fileManejador = new FileHandler("C:/Users/ignac/OneDrive/Escritorio/OO2/Practica 6/logs.json");
+		fileManejador.setFormatter(new JSONFormater());
+		
+		Logger.getLogger("app.main").addHandler(manejador);
+		Logger.getLogger("app.main").addHandler(fileManejador);
+	}
+	
+	public boolean login(String password) {
+		if(password == pass) {
+			logged = true;
+		}
+		else {
+			Logger.getLogger("app.main").log(Level.SEVERE,"Acceso invalido a la base de datos!");
+		}
+		return logged;
+	}
+
+	public boolean isLogged() {
+		return this.logged;
+	}
+	
+	@Override
+	public Collection<String> getSearchResults(String queryString) {
+		if(this.isLogged()) {
+			Logger.getLogger("app.main").log(Level.INFO,"Acceso valido para la busqueda!");
+			return database.getSearchResults(queryString);
+		}
+		return null;
+	}
+
+	@Override
+	public int insertNewRow(List<String> rowData) {
+		if (this.isLogged()) {
+			Logger.getLogger("app.main").log(Level.WARNING,"Acceso valido para la insercion!");
+			return database.insertNewRow(rowData);
+		}
+		return -1;
+	}
+
+}

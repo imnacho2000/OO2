@@ -1,0 +1,18 @@
+package ar.edu.unlp.info.oo2.accesobd;
+import java.util.logging.*;
+
+
+import org.json.simple.JSONObject;
+
+public class JSONFormater extends Formatter {
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public String format(LogRecord record) {
+		JSONObject mensaje = new JSONObject();
+		mensaje.put("level:", record.getLevel());
+		mensaje.put("message", record.getMessage());
+		return mensaje.toJSONString();
+	}
+}
+	

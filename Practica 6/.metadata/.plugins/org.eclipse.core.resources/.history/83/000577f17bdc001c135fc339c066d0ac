@@ -1,0 +1,14 @@
+package ar.edu.unlp.info.oo2.accesobd;
+import java.util.logging.*;
+
+
+import org.json.simple.JSONObject;
+
+public class JSONFormater extends Formatter {
+	
+	@Override
+	public String format(LogRecord record) {
+		return "{" + "message" + ":" + record.getMessage() + "level:" + record.getLevel() + "}"; 
+	}
+}
+	

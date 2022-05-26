@@ -1,0 +1,51 @@
+package ar.edu.unlp.info.oo2.accesobd;
+
+import java.util.ArrayList;
+import java.util.logging.FileHandler;
+import java.util.logging.Formatter;
+import java.util.logging.Handler;
+import java.util.logging.LogRecord;
+
+public class ElFiltrador extends Handler {
+	private  String palabara;
+	private FileHandler handler;
+	private ArrayList<String> palabrasCensuradas = new ArrayList<String>();
+	
+	
+	public void setPalabraACensurar(String palabra) {
+		this.palabara = palabra;
+	}
+
+	public String getPalabra(String palabra) {
+		return this.palabara;
+	}
+	
+	public void agregarPalabra(String palabra) {
+		this.palabrasCensuradas.add(palabra);
+	}
+	
+	
+	public void publish(LogRecord record) {
+		String log = record.getMessage();
+		for(String msg:palabrasCensuradas) {
+			if(log.contains(msg)) {
+				log = log.replace(msg.toString(),"***");
+			}
+		}
+		record.setMessage(log);
+		this.handler.publish(record);
+	}
+
+
+	@Override
+	public void flush() {
+		this.handler.flush();
+		
+	}
+
+	@Override
+	public void close() throws SecurityException {
+		this.handler.close();
+		
+	}
+}
