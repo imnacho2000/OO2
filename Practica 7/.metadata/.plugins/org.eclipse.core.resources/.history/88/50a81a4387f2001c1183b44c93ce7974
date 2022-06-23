@@ -1,0 +1,19 @@
+package ar.edu.unlp.info.oo2.Ejercicio3;
+
+public class Registrar extends EstadoProyecto {
+
+	public Registrar(Proyecto proyecto) {
+		super(proyecto);
+	}
+	
+	@Override
+	protected void registrar() {
+		this.proyecto.setEstado(new Publicar(this));
+	}
+	
+	@Override
+	String estado() {
+		return null;
+	}
+
+}

@@ -1,0 +1,47 @@
+/**
+ * 
+ */
+package ar.edu.unlp.info.oo2.Ejercicio3;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+public class PersonaTest {
+	
+	Emprendedor james;
+	Persona guido;
+	Proyecto proyecto;
+	
+	@BeforeEach
+	void setUp() throws Exception {
+		
+		james = new Emprendedor("James");
+		proyecto = new Proyecto("Vacaciones Kathmandu 2023",5000,james);
+		guido = new Persona("guido");
+		
+	}
+	
+    @Test
+    public void testProyecto() {
+    	assertEquals("Publicado",proyecto.getEstado());
+    	guido.invertirDinero(proyecto, 5000);
+    	assertEquals(5000,proyecto.consultarMontoTotalRecibido());
+    	guido.invertirDinero(proyecto, 5000);
+    	assertEquals(10000,proyecto.consultarMontoTotalRecibido());
+    	assertEquals("Conformado",proyecto.getEstado());
+    	
+    	Exception e = assertThrows(RuntimeException.class,() -> proyecto.Cancelar());
+    	assertEquals("El Proyecto se encuentra conformado no se puede cancelar.",e.getMessage());
+    	guido.invertirDinero(proyecto, 5000);
+    	assertEquals(15000,proyecto.consultarMontoTotalRecibido());
+    	
+    	e = assertThrows(RuntimeException.class,() -> proyecto.publicar());
+    	assertEquals("El Proyecto se encuentra" + proyecto.getEstado() + " no se puede publicar.",e.getMessage());
+    	
+    }
+    
+    
+}

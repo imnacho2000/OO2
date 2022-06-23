@@ -1,0 +1,20 @@
+package ar.edu.unlp.info.oo2.Ejercicio3;
+
+public class Cancelar extends EstadoProyecto {
+
+	public Cancelar(Proyecto proyecto) {
+		super(proyecto);
+	}
+
+	@Override
+	String estado() {
+		return "Cancelado";
+	}
+	
+	public void Cancelar() {
+		System.out.println("Proyecto cancelado");
+	}
+	
+	
+
+}

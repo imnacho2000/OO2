@@ -1,0 +1,19 @@
+package ar.edu.unlp.info.oo2.Ejercicio2;
+
+import java.util.ArrayList;
+
+public class DebitoGateway {
+	private ArrayList<String> errores;
+	
+	
+	public DebitoGateway() {
+		this.errores = new ArrayList<String>();
+		this.errores.add("");
+	}
+	
+	
+	public ArrayList<String> autorizarMontoConCBU(double unMonto, String cbu) {
+		return errores;
+	}
+	
+}

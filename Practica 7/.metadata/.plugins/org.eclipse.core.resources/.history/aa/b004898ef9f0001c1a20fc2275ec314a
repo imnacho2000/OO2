@@ -1,0 +1,13 @@
+package ar.edu.unlp.info.oo2.Ejercicio2;
+
+public class DebitoGateway {
+	
+	public DebitoGateway() {
+		
+	}
+	
+	public ArrayList<String> autorizarMontoConCBU(double unMonto, String cbu) {
+		
+	}
+	
+}

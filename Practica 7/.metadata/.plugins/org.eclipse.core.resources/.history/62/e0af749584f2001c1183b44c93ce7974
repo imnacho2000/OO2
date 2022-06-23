@@ -1,0 +1,21 @@
+package ar.edu.unlp.info.oo2.Ejercicio3;
+
+public abstract class EstadoProyecto {
+	private Proyecto proyecto;
+	
+	public EstadoProyecto(Proyecto proyecto) {
+		this.proyecto = proyecto;
+	}
+	
+	protected void registrar() {
+		
+	}
+	
+	protected void cancelar() {
+		
+	}
+	
+	protected void conformar() {
+		
+	}
+}

@@ -1,0 +1,17 @@
+package ar.edu.unlp.info.oo2.Ejercicio1;
+
+public class LavadoDiario implements TiposLavado{
+
+	@Override
+	public int hacer(Lavarropas tipo) {
+		tipo.agregarAgua(50);
+		tipo.agregarJabon();
+		tipo.lavar(20);
+		tipo.vaciarAgua();
+		tipo.agregarEnjuage();
+		tipo.enjuaga(7);
+		tipo.centrifugar(3);
+		return tipo.getEnjuage() + tipo.getCentrifugar() + tipo.getLavar();
+	}
+	
+}

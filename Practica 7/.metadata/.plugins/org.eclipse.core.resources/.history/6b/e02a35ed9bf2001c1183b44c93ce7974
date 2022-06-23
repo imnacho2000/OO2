@@ -1,0 +1,20 @@
+package ar.edu.unlp.info.oo2.Ejercicio3;
+
+public class Conformar extends EstadoProyecto{
+
+	public Conformar(Proyecto proyecto) {
+		super(proyecto);
+	}
+
+	@Override
+	String getEstado() {
+		return "Conformado";
+	}
+	
+	@Override
+	protected void conformar() {
+		System.out.println("El proyecto se encuentra conformado.");
+	}
+	
+
+}

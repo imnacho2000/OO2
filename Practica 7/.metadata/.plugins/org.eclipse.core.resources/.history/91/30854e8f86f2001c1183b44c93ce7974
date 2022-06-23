@@ -1,0 +1,10 @@
+package ar.edu.unlp.info.oo2.Ejercicio3;
+
+public class Cancelar extends EstadoProyecto {
+
+	@Override
+	String estado() {
+		return "Cancelado";
+	}
+
+}

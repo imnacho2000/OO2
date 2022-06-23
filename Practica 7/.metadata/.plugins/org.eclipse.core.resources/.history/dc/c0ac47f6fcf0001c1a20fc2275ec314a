@@ -1,0 +1,24 @@
+package ar.edu.unlp.info.oo2.Ejercicio2;
+
+public class GatewayAdapter extends Pedido {
+	private DebitoGateway debitoGateWay;
+	private DineroMailGateway dineroMail;
+	
+	
+	public GatewayAdapter(DebitoGateway debitoGateWay) {
+		this.debitoGateWay = debitoGateWay;
+	}
+	
+	public GatewayAdapter(DineroMailGateway dineroMail) {
+		this.dineroMail = dineroMail;
+	}
+	
+	
+	public boolean pagar(DebitoGateway debitoGateWay) {
+		return debitoGateWay.pagarMontoConCBU(super.getCbu(), null)
+	}
+	
+	public boolean pagar(DineroMailGateway dineroMail) {
+		
+	}
+}

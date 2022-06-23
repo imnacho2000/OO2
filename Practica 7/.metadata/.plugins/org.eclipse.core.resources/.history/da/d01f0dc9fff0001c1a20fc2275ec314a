@@ -1,0 +1,12 @@
+package ar.edu.unlp.info.oo2.Ejercicio2;
+
+public class DebitoGatewayAdapter implements GatewayAdapter {
+	private DebitoGateway debito;
+	
+	@Override
+	public boolean pagar(Cliente cliente, double unMonto) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

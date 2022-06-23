@@ -1,0 +1,55 @@
+package ar.edu.unlp.info.oo2.Ejercicio3;
+
+public class Proyecto {
+	private double dineroRecibido,dineroNecesario;
+	private String nombreProyecto;
+	private Emprendedor responable;
+	
+	private EstadoProyecto estado;
+	
+	public Proyecto(String nombreProyecto,double dineroNecesario,Emprendedor responsable) {
+		this.dineroNecesario = dineroNecesario;
+		this.nombreProyecto = nombreProyecto;
+		this.responable = responsable;
+		this.estado = new Registrar(this);
+	}
+	
+	public void setEstado(EstadoProyecto estado) {
+		this.estado = estado;
+	}
+	
+	public String getEstado() {
+		return this.estado.getEstado();
+	}
+	
+	public void publicar() {
+		this.estado.publicar();
+	}
+	
+	
+	public void Cancelar() {
+		this.estado.cancelar();	
+	}
+
+
+	public double getDineroRecibido() {
+		return this.dineroRecibido;
+	}
+	
+	public double getDineroNecesario() {
+		return this.dineroNecesario;
+	}
+	
+	public void addDinero(double unValor) {
+		this.dineroRecibido += unValor;
+	} 
+	
+	public void invertirDinero(double dineroRecibido) {
+		this.estado.invertirDinero(dineroRecibido);
+	}
+	
+
+
+	
+	
+}

@@ -1,0 +1,11 @@
+package ar.edu.unlp.info.oo2.Ejercicio2;
+
+public abstract class GatewayAdapter {
+	private DebitoGateway debidoGateWay;
+	private DineroMailGateway dineroMail;
+	
+	public GatewayAdapter(DebitoGateway debitoGateWay) {
+		this.debidoGateWay = debitoGateWay;
+	}
+	
+}

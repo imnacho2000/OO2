@@ -1,0 +1,10 @@
+package ar.edu.unlp.info.oo2.Ejercicio2;
+
+public class Pedido {
+	private Cliente cliente;
+	private double montoPedido;
+	
+	public Pedido(double montoPedido) {
+		this.montoPedido = montoPedido;
+	}
+}

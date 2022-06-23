@@ -1,0 +1,16 @@
+package ar.edu.unlp.info.oo2.Ejercicio3;
+
+public class Publicar extends EstadoProyecto {
+
+	public Publicar(Proyecto proyecto) {
+		super(proyecto);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	String estado() {
+		// TODO Auto-generated method stub
+		return "Publicado";
+	}
+
+}

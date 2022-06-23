@@ -1,0 +1,45 @@
+package ar.edu.unlp.info.oo2.Ejercicio3;
+
+public class Proyecto {
+	private double dineroRecibido,dineroNecesario;
+	private String nombreProyecto;
+	private Emprendedor responable;
+	
+	private EstadoProyecto estado;
+	
+	public Proyecto(String nombreProyecto,double dineroNecesario,Emprendedor responsable) {
+		this.dineroNecesario = dineroNecesario;
+		this.nombreProyecto = nombreProyecto;
+		this.responable = responsable;
+		this.estado = new Registrar(this);
+	}
+	
+	public void setEstado(EstadoProyecto estado) {
+		this.estado = estado;
+	}
+	
+	public void Cancelar() {
+		this.estado.cancelar();	
+	}
+
+	public double getDineroRecibido() {
+		return this.dineroRecibido;
+	}
+	
+	public double getDineroNecesario() {
+		return this.dineroNecesario;
+	}
+	
+	public void invertirDinero(double dineroRecibido) {
+		if(this.estado.getEstado() == "Cancelado") {			
+			throw new RuntimeException("El Proyecto se encuentra cancelado.");
+		}
+		this.dineroRecibido += dineroRecibido;
+		
+	}
+	
+
+
+	
+	
+}

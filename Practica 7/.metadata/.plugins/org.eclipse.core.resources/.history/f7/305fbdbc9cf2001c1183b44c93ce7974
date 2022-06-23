@@ -1,0 +1,32 @@
+package ar.edu.unlp.info.oo2.Ejercicio3;
+
+public abstract class EstadoProyecto {
+	
+	protected Proyecto proyecto;
+	
+	public EstadoProyecto(Proyecto proyecto) {
+		this.proyecto = proyecto;
+	}
+	
+	abstract String getEstado();
+	
+	protected void invertirDinero(double unValor) {
+		this.proyecto.addDinero(unValor);
+	}
+	
+	protected void publicar() {
+		this.proyecto.setEstado(new Publicar(proyecto));
+	}
+	
+	protected void registrar() {
+		
+	}
+	
+	protected void cancelar() {
+		
+	}
+	
+	protected void conformar() {
+		
+	}
+}

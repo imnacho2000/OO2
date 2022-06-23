@@ -1,0 +1,32 @@
+package ar.edu.unlp.info.oo2.Ejercicio2;
+
+public class Pedido {
+	private Cliente cliente;
+	private double montoPedido;
+	
+	public Pedido(double montoPedido,Cliente cliente) {
+		this.montoPedido = montoPedido;
+		this.cliente = cliente;
+	}
+	
+	public Pedido() {
+		
+	}
+	
+	public String getCbu() {
+		return this.cliente.getCBU();
+	}
+	
+	public String getEmail() {
+		return  this.cliente.getEmail();
+	}
+	
+	
+	public double monto() {
+		return this.montoPedido;
+	}
+	
+	public boolean pagarConMedio(GatewayAdapter medio){
+		return medio	
+	}
+}

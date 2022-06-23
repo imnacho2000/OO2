@@ -1,0 +1,36 @@
+package ar.edu.unlp.info.oo2.Ejercicio3;
+
+public class Cancelar extends EstadoProyecto {
+
+	public Cancelar(Proyecto proyecto) {
+		super(proyecto);
+	}
+
+	@Override
+	String getEstado() {
+		return "Cancelado";
+	}
+	
+	@Override
+	protected void cancelar() {
+		System.out.println("Proyecto cancelado");
+	}
+	
+	
+	@Override
+	protected void registrar() {
+		throw new RuntimeException("El Proyecto se encuentra cancelado.");
+	}
+	
+	@Override
+	protected void invertirDinero(double unValor) {
+		throw new RuntimeException("El Proyecto se encuentra cancelado no se puede invertir.");
+	}
+	
+	@Override
+	protected void publicar() {
+		throw new RuntimeException("El Proyecto se encuentra publicado no se puede publicar.");
+	}
+	
+
+}

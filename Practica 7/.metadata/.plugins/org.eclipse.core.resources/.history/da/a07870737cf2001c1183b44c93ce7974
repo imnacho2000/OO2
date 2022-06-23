@@ -1,0 +1,11 @@
+package ar.edu.unlp.info.oo2.Ejercicio3;
+
+public class Emprendedor {
+	private ArrayList<Proyecto> proyectos;
+	private String nombre;
+	
+	public Emprendedor(String nombre) {
+		this.nombre = nombre;
+		this.proyectos = new ArrayList<Proyecto>();
+	}
+}

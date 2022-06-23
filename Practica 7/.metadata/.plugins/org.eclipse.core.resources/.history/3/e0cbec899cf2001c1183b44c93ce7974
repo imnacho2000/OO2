@@ -1,0 +1,24 @@
+package ar.edu.unlp.info.oo2.Ejercicio3;
+
+public class Registrar extends EstadoProyecto {
+
+	public Registrar(Proyecto proyecto) {
+		super(proyecto);
+	}
+	
+	@Override
+	protected void registrar() {
+		this.proyecto.setEstado(new Publicar(proyecto));
+	}
+	
+	@Override
+	String getEstado() {
+		return "Registrado";
+	}
+	
+	@Override
+	protected double invertirDinero(double unValor) {
+		throw new RuntimeException("El Proyecto se encuentra registrado, no esta publicado.");
+	}
+	
+}

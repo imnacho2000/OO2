@@ -1,0 +1,63 @@
+	package ar.edu.unlp.info.oo2.Ejercicio1;
+
+public class Lavarropas {
+	private TiposLavado tiposLavado;
+	private int enjuage,centrifugar,lavar,agua;
+	
+	public Lavarropas() {
+		this.tiposLavado = tiposLavado;
+	}
+	
+	public void setTipoLavado(TiposLavado tipo) {
+		this.tiposLavado = tipo;
+	}
+	
+	public void agregarAgua(int porcentaje) {
+		this.agua = porcentaje;
+	}
+	
+	public void agregarJabon() {
+		System.out.println("Agregando jabon");
+	}
+	
+	public void lavar(int minutos) {
+		this.lavar = minutos;
+	}
+	
+	public void vaciarAgua() {
+		System.out.println("Vaciando agua");
+	}
+	
+	public void agregarEnjuage() {
+		System.out.println("Agregando enjuage");
+	}
+	
+	public void enjuaga(int minutos) {
+		this.enjuage = minutos;
+	}
+	
+	public void centrifugar(int minutos) {
+		this.centrifugar = minutos;
+	} 
+	
+	
+	
+	public int getEnjuage() {
+		return enjuage;
+	}
+
+	public int getCentrifugar() {
+		return centrifugar;
+	}
+
+	public int getLavar() {
+		return lavar;
+	}
+
+
+	public int hacer() {
+		this.tiposLavado.hacer(this);
+		return this.getEnjuage() + this.getCentrifugar() + this.getLavar();
+	}
+	
+}

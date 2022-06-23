@@ -1,0 +1,12 @@
+INDEX VERSION 1.131+C:\Users\ignac\OneDrive\Escritorio\Practicando 002\Practica 7\.metadata\.plugins\org.eclipse.jdt.core
+2356011476.index
+1554378507.index
+2459638085.index
+527261966.index
+358920302.index
+4069953991.index
+1865797976.index
+1650688248.index
+2669392255.index
+3140612027.index
+2953730919.index
